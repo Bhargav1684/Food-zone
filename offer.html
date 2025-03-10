@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .color {
+        background-color: #faf3ed;
+        font-family: arial;
+    }
+
+    /*navigation bar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #b0391f;
+        padding: 15px;
+        color: white;
+    }
+
+    .logo {
+        margin-top: 30px;
+        color: white;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    .nav-links li {
+        margin: 30px 20px;
+        font-size: 1.2rem;
+    }
+
+    .nav-links li a {
+        color: #faf3ed;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 0.5rem;
+        position: relative;
+    }
+
+    /* Styling the hover effect for the links */
+    .nav-links li a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #faf3ed;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: all 0.6s ease;
+        bottom: 0;
+        left: 0;
+    }
+
+    .nav-links li a:hover::before {
+        transform: scaleX(1);
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 1rem;
+    }
+
+    /* offer */
+    .container {
+        width: 100%;
+    }
+
+    .food-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .offers-container,
+    .food-items {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .offer,
+    .food-item {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .offer img,
+    .food-item img {
+        width: 70%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .offer h3,
+    .food-item h3 {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .offer p,
+    .food-item p {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 10px;
+    }
+
+    .offer:hover,
+    .food-item:hover {
+        transform: translateY(-10px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+
+        .offer,
+        .food-item {
+            width: 100%;
+        }
+    }
+</style>
+
+<body class="color">
+    <!-----navbar----->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>Foodie's Delight</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+
+    <div class="container">
+        <section class="food-section">
+            <h2 class="section-title">Latest Offers & New Arrivals</h2>
+
+            <div class="offers-container">
+                <!-- Offer 1 -->
+                <div class="offer" data-aos="fade-up">
+                    <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2021-05/McAloo%20Tikki%20VM.jpg"
+                        alt="Offer 1">
+                    <h3>Discount on Pizza</h3>
+                    <p>Get 20% off on all pizzas!</p>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="offer" data-aos="fade-up" data-aos-delay="200">
+                    <img src="" alt="Offer 2">
+                    <h3>Free Drink with Burgers</h3>
+                    <p>Enjoy a free soft drink with any burger purchase.</p>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="offer" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://via.placeholder.com/300x200" alt="Offer 3">
+                    <h3>Buy 1 Get 1 Free</h3>
+                    <p>Get 1 sandwich free when you buy one!</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Latest Arrivals</h2>
+
+            <div class="food-items">
+                <div class="food-item" data-aos="fade-left">
+                    <img src="https://im.indiatimes.in/content/2023/Mar/tikki_6418927966115.jpg?w=1200&h=900&cc=1&webp=1&q=75"
+                        alt="Food 1">
+                    <h3>Spicy Pasta</h3>
+                    <p>Our new Spicy Pasta is a must-try!</p>
+                </div>
+
+                <div class="food-item" data-aos="fade-left" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/300x200" alt="Food 2">
+                    <h3>Cheese Burger</h3>
+                    <p>Cheese overload with every bite!</p>
+                </div>
+
+                <div class="food-item" data-aos="fade-left" data-aos-delay="400">
+                    <img src="https://via.placeholder.com/300x200" alt="Food 3">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich and delicious chocolate cake.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Duration of the animation
+            once: true,     // Animation triggers only once
+            offset: 200,    // Start the animation 200px before the element comes into view
+        });
+    </script>
+
+    <footer>
+        <p>&copy; Foodie's delight. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

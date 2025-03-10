@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie's Delight Menu</title>
+    <style>
+        /* Body Style */
+        body {
+            background-color: #faf3ed;
+            font-family: arial;
+        }
+
+        /* navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #b0391f;
+            color: white;
+            padding: 15px;
+        }
+
+        .nav-links {
+            gap: 1rem;
+            /* Corrected gap value */
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 30px 10px;
+            font-size: 1.2rem;
+        }
+
+        .nav-links li a {
+            color: #faf3ed;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 0.5rem;
+            position: relative;
+            font-family: arial;
+        }
+
+        /* Styling the hover effect for the links */
+        .nav-links li a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #faf3ed;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: all 0.6s ease;
+            bottom: 0;
+            left: 0;
+        }
+
+        .nav-links li a:hover::before {
+            transform: scaleX(1);
+        }
+
+        .logo {
+            margin-top: 30px;
+            color: white;
+        }
+
+        /* Menu Container */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 200px;
+        }
+
+        /* Individual Menu */
+        .menu {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            width: 200px;
+        }
+
+        /* Menu Item */
+        .menu p {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #777;
+        }
+
+        .menu h3 {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Dots Styling */
+        .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #000;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+    </style>
+
+<body>
+    <!--navbar---->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Foodie's Delight</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="review.html">Review</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-container">
+        <!-- First Menu -->
+        <div class="menu">
+            <h3>Pizza</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+
+        <!-- Second Menu -->
+        <div class="menu">
+            <h3>Burger</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+
+        <!-- third Menu -->
+        <div class="menu">
+            <h3>Thali</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+
+        <!-- fourth Menu -->
+        <div class="menu">
+            <h3>Sendwitch</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+
+        <!-- fifth Menu -->
+        <div class="menu">
+            <h3>Colddrinks</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+
+        <!-- six Menu -->
+        <div class="menu">
+            <h3>Roti</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+
+        <!-- seven Menu -->
+        <div class="menu">
+            <h3>Sabji</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+
+        <!-- eight Menu -->
+        <div class="menu">
+            <h3>Desert</h3>
+            <p><span>Pizza</span><span class="dots"></span><span>₹ 100</span></p>
+            <p><span>Burger</span><span class="dots"></span><span>₹ 50</span></p>
+            <p><span>Pasta</span><span class="dots"></span><span>₹ 70</span></p>
+            <p><span>Salad</span><span class="dots"></span><span>₹ 30</span></p>
+            <p><span>Fries</span><span class="dots"></span><span>₹ 20</span></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Foodie's delight. All rights reserved.</p>
+    </footer>
+
+    <!---test --->
+
+    <script>
+
+    </script>
+</body>
+
+</html>

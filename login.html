@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login</title>
+</head>
+
+<body class="color">
+
+    <style>
+        .color {
+            background-color: #faf3ed;
+            font-family: arial;
+        }
+
+        /* navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #b0391f;
+            color: white;
+            padding: 15px;
+        }
+
+        .nav-links {
+            gap: 1rem;
+            /* Corrected gap value */
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 30px 10px;
+            font-size: 1.2rem;
+        }
+
+        .nav-links li a {
+            color: #faf3ed;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 0.5rem;
+            position: relative;
+            font-family: arial;
+        }
+
+        /* Styling the hover effect for the links */
+        .nav-links li a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #faf3ed;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: all 0.6s ease;
+            bottom: 0;
+            left: 0;
+        }
+
+        .nav-links li a:hover::before {
+            transform: scaleX(1);
+        }
+
+        .logo {
+            transition: 0.35s ease;
+            margin-top: 30px;
+            color: #faf3ed;
+        }
+
+        /* login form */
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fefdfb;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 8px;
+            margin: 50px auto;
+        }
+
+        .form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form button:hover {
+            background-color: #0056b3;
+        }
+
+        .form p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 768px) {
+            .form-container {
+                width: 90%;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+    </style>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>Foodie's delight</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!---login form------>
+    <div class="form-container">
+        <div class="form-box">
+            <form id="loginForm" class="form">
+                <h2>Login</h2>
+                <input type="text" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+                <p>Don't have an account? <a href="login.html" id="showRegisterForm">Register</a></p>
+            </form>
+
+            <form id="registerForm" class="form" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" id="registerName" placeholder="Full Name" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="submit" class="btn">Register</button>
+                <p>Already have an account? <a href="index.html" id="showLoginForm">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Foodie's delight. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get elements
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const showRegisterForm = document.getElementById('showRegisterForm');
+        const showLoginForm = document.getElementById('showLoginForm');
+
+        // Toggle to Register Form
+        showRegisterForm.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        });
+
+        // Toggle to Login Form
+        showLoginForm.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        // Handle login form submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Simple validation (replace with real authentication logic)
+            if (email === "test@gmail.com" && password === "12345") {
+                // Store login status in sessionStorage (or use localStorage for persistent login)
+                sessionStorage.setItem('loggedIn', 'true');
+                sessionStorage.setItem('userEmail', email);
+
+                // Redirect to the home page after successful login
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid login credentials');
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

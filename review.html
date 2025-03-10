@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cusromer review</title>
+</head>
+
+<style>
+  body {
+    background-color: #faf3ed;
+    font-family: arial;
+  }
+
+  /* navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #b0391f;
+    color: white;
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    /* Corrected gap value */
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 30px 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-links li a {
+    color: #faf3ed;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0.5rem;
+    position: relative;
+    font-family: arial;
+  }
+
+  /* Styling the hover effect for the links */
+  .nav-links li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #faf3ed;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav-links li a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .logo {
+    transition: 0.35s ease;
+    margin-top: 30px;
+    color: #faf3ed;
+  }
+
+  /* review */
+  .review-section {
+    background-color: #fefdfb;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 100px;
+    font-size: 1rem;
+  }
+
+  button.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  button.submit-btn:hover {
+    background-color: #e64a19;
+  }
+
+  .stars {
+    display: flex;
+    gap: 10px;
+  }
+
+  .star {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ddd;
+  }
+
+  .star:hover,
+  .star.selected {
+    color: #ffbc00;
+  }
+
+  .reviews-container {
+    margin-top: 30px;
+  }
+
+  .review {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .rating-display {
+    color: #ffbc00;
+  }
+
+  @media (max-width: 600px) {
+    .review-section {
+      padding: 20px;
+    }
+  }
+</style>
+
+<body>
+  <!---navbar---->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>Foodie's delight</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-----Review form---->
+  <section class="review-section">
+    <h2>Leave a Review</h2>
+    <form id="review-form">
+      <div class="rating">
+        <span>Rate your experience:</span>
+        <div class="stars" id="stars">
+          <span class="star" data-rating="1">&#9733;</span>
+          <span class="star" data-rating="2">&#9733;</span>
+          <span class="star" data-rating="3">&#9733;</span>
+          <span class="star" data-rating="4">&#9733;</span>
+          <span class="star" data-rating="5">&#9733;</span>
+        </div>
+      </div>
+
+      <textarea id="review-text" placeholder="Write your review here..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+
+    <div class="reviews-container">
+      <h3>Customer Reviews</h3>
+      <div class="review">
+        <p><strong>Tarun</strong> - <span class="rating-display">★★★★★</span></p>
+        <p>The food was amazing! Definitely coming back.</p>
+      </div>
+      <div class="review">
+        <p><strong>Rahul</strong> - <span class="rating-display">★★★★☆</span></p>
+        <p>Great service and delicious food, but the delivery took a bit longer than expected.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let selectedRating = 0;
+      const stars = document.querySelectorAll('.star');
+      const reviewForm = document.getElementById('review-form');
+      const reviewText = document.getElementById('review-text');
+
+      // Handle star click
+      stars.forEach(star => {
+        star.addEventListener('click', function () {
+          selectedRating = this.getAttribute('data-rating');
+          updateStars(selectedRating);
+        });
+      });
+
+      // Update star colors based on selected rating
+      function updateStars(rating) {
+        stars.forEach(star => {
+          if (star.getAttribute('data-rating') <= rating) {
+            star.classList.add('selected');
+          } else {
+            star.classList.remove('selected');
+          }
+        });
+      }
+
+      // Handle form submission
+      reviewForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (selectedRating === 0 || reviewText.value.trim() === "") {
+          alert('Please provide a rating and a review!');
+          return;
+        }
+
+        const reviewContainer = document.querySelector('.reviews-container');
+        const newReview = document.createElement('div');
+        newReview.classList.add('review');
+        newReview.innerHTML = `
+      <p><strong>Anonymous</strong> - <span class="rating-display">${'★'.repeat(selectedRating)}${'☆'.repeat(5 - selectedRating)}</span></p>
+      <p>${reviewText.value}</p>
+    `;
+        reviewContainer.appendChild(newReview);
+
+        // Reset form
+        reviewText.value = '';
+        selectedRating = 0;
+        updateStars(0);
+      });
+    });
+
+  </script>
+</body>
+
+</html>

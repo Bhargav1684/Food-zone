@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie's Delight Cart</title>
+</head>
+
+<style>
+  .color {
+    background-color: #faf3ed;
+    font-family: arial;
+  }
+
+  /* navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #b0391f;
+    color: white;
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    /* Corrected gap value */
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 30px 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-links li a {
+    color: #faf3ed;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0.5rem;
+    position: relative;
+    font-family: arial;
+  }
+
+  /* Styling the hover effect for the links */
+  .nav-links li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #faf3ed;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+    bottom: 0;
+    left: 0;
+  }
+
+  .nav-links li a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .text3 {
+    transition: 0.35s ease;
+    margin-top: 30px;
+    color: #faf3ed;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 250px;
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  /* footer */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+  }
+
+  /* payment option */
+  .container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1,
+  h2 {
+    color: #333;
+    font-size: 1.3rem;
+  }
+
+  .payment-options {
+    margin-top: 20px;
+  }
+
+  .payment-option {
+    margin-bottom: 30px;
+  }
+
+  .payment-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .payment-btn:hover {
+    background-color: #45a049;
+  }
+
+  .payment-details {
+    margin-top: 20px;
+  }
+
+  .payment-details h3 {
+    font-size: 1rem;
+  }
+
+  .payment-details input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .payment-form .submit-btn {
+    background-color: #45a049;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  /* order successful */
+  .success-msg {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .order-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #faf3ed;
+    margin-top: 30px;
+    border-radius: 8px;
+  }
+
+  .order-success-message h1 {
+    color: #28a745;
+  }
+
+  .order-buttons {
+    margin-top: 20px;
+  }
+
+  .order-buttons .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .order-buttons .btn:hover {
+    background-color: #0056b3;
+  }
+
+  .container1 {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .text {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .container2 {
+    text-align: center;
+    justify-content: center;
+  }
+</style>
+
+<body class="color">
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h2 class="text3">Foodie's delight</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="review.html">Review</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container2">
+    <h3>Your Cart</h3>
+    <!-- Cart Section -->
+    <div class="cart-section">
+
+      <!-- Cart items will be dynamically inserted here by JavaScript -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      displayCart(); // Display cart items when the page loads
+    </script>
+  </div>
+
+  <!-- Payment Option Section -->
+  <h1 class="text">Select Your Payment Option</h1>
+  <div class="container1">
+    <div class="container">
+
+      <div class="payment-options">
+        <!-- Online Payment Option -->
+        <div class="payment-option">
+          <h2>Online Payment</h2>
+          <button class="payment-btn online-btn">Pay Now</button>
+          <p>Make your payment through Credit/Debit Card, PayPal, or Bank Transfer.</p>
+          <div class="payment-details">
+            <h3>Online Payment Details:</h3>
+            <form id="online-payment-form" class="payment-form" style="display: none;">
+              <label for="card-number">Card Number:</label>
+              <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required><br>
+
+              <label for="expiry-date">Expiry Date:</label>
+              <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required><br>
+
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required><br>
+
+              <button type="submit" class="submit-btn">Submit Payment</button>
+            </form>
+            <p id="payment-success-msg" class="success-msg" style="display: none;">Payment Successful! Thank you for
+              your
+              purchase.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offline Payment Option -->
+    <div class="container1">
+      <div class="container">
+        <div class="payment-option">
+          <h2>Offline Payment</h2>
+          <button class="payment-btn offline-btn">Pay Later</button>
+          <p>Choose Cash on Delivery or Bank Transfer.</p>
+          <div class="payment-details">
+            <h3>Offline Payment Details:</h3>
+            <ul>
+              <li><strong>Cash on Delivery:</strong> Pay when your food arrives at your doorstep.</li>
+              <li><strong>Bank Transfer:</strong> Transfer payment to our account. Contact us for details.</li>
+            </ul>
+            <p id="pay-later-msg" class="success-msg" style="display: none;">You have selected to pay later. Thank you!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Success Message -->
+  <div class="order-container" style="display: none;">
+    <div class="order-success-message">
+      <h1>Order Successful!</h1>
+      <p>Your order has been placed successfully. Thank you for Order!</p>
+
+      <div class="order-buttons">
+        <button class="btn btn-view-order">View Order Details</button>
+        <a href="index.html"><button class="btn btn-back-home">Back to Homepage</button></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Foodie's delight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const onlineBtn = document.querySelector('.online-btn');
+      const offlineBtn = document.querySelector('.offline-btn');
+      const onlineForm = document.getElementById('online-payment-form');
+      const paymentSuccessMsg = document.getElementById('payment-success-msg');
+      const payLaterMsg = document.getElementById('pay-later-msg');
+      const orderContainer = document.querySelector('.order-container');
+
+      // Show order success after a payment is made (for both options)
+      onlineBtn.addEventListener('click', function () {
+        onlineForm.style.display = 'block';
+        paymentSuccessMsg.style.display = 'none';
+      });
+
+      offlineBtn.addEventListener('click', function () {
+        payLaterMsg.style.display = 'block';
+        setTimeout(function () {
+          orderContainer.style.display = 'block';
+        }, 1000);  // Show order success after 1 second
+      });
+
+      // Handle online payment form submission
+      onlineForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        paymentSuccessMsg.style.display = 'block';
+        setTimeout(function () {
+          orderContainer.style.display = 'block';
+        }, 1000);  // Show order success after 1 second
+      });
+    });
+
+  </script>
+</body>
+
+</html>

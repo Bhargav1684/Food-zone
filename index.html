@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>foodie's delight.com</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="color">
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Foodie's Delight</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="test.html">test</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="hero.png" alt="Delicious Food">
+    <div class="hero-text">
+      <h2><em>Welcome to Foodie's Delight</em></h2>
+      <p><i>Enjoy the best food in town!</i></p>
+    </div>
+  </section>
+
+  <!---back to top--->
+  <button id="backToTopBtn" class="back-to-top-btn">↑</button>
+
+  <!---food-section---->
+  <div class="food-section">
+    <div class="food-item">
+      <a href=""><img
+          src="https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*"
+          alt="Pizza"></a>
+      <h3>Pizza</h3>
+    </div>
+
+    <div class="food-item">
+      <a href=""><img
+          src="https://www.shutterstock.com/image-photo/delicious-cheeseburger-stacked-high-juicy-600nw-126066629.jpg"
+          alt="Burger"></a>
+      <h3>Burger</h3>
+    </div>
+
+    <div class="food-item">
+      <a href=""><img
+          src="https://img.freepik.com/premium-photo/traditional-italian-penne-pasta-with-bolognese-sauce-fresh-basil-black-background-side-view-close-up_166116-4345.jpg"
+          alt="Pasta"></a>
+      <h3>Pasta</h3>
+    </div>
+
+    <div class="food-item">
+      <a href=""><img
+          src="https://static.vecteezy.com/system/resources/thumbnails/027/536/411/small/delicious-french-fries-on-a-white-background-photo.jpg"
+          alt="Sushi"></a>
+      <h3>French fries</h3>
+    </div>
+
+    <div class="food-item">
+      <a href=""><img
+          src="https://media.istockphoto.com/id/1292637103/photo/veg-hakka-noodles-a-popular-oriental-dish-made-with-noodles-and-vegetables-served-over-a.jpg?s=612x612&w=0&k=20&c=wp7gojub20NEMRABP1wIaDY6qq11eMFJZ2gqIjfht4g="
+          alt="Tacos"></a>
+      <h3>Noodles</h3>
+    </div>
+
+    <div class="food-item">
+      <a href=""><img
+          src="https://www.shutterstock.com/image-photo/dabeli-kutchi-double-roti-popular-600nw-1995480092.jpg"
+          alt="Salad"></a>
+      <h3>Dabeli</h3>
+    </div>
+
+    <div class="food-item">
+      <a href=""><img
+          src="https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg"
+          alt="Salad"></a>
+      <h3>Salad</h3>
+
+    </div>
+  </div>
+
+  <!----food-section1------>
+  <section class="food-section1">
+    <h2 class="text"><i>Today's Menu</i></h2>
+
+    <div class="food-container">
+      <div class="food-item1">
+        <img src="https://5.imimg.com/data5/IY/UB/VY/SELLER-99746372/takeaway-meal-tray-8cp.jpg" alt="Gujrati, Thali">
+        <h3>Gujrati, Thali</h3>
+        <p>4 sabji, 3 roti, 3 puri, 1 papad, chhash, dal-rise.</p>
+        <span class="price">₹ 250</span><br>
+        <button class="add" onclick="addToCart('Gujrati, Thali', 250)">Add to Cart</button>
+      </div>
+
+      <div class="food-item1">
+        <img src="https://prakashnamkeen.com/cdn/shop/files/PunjabiThali.jpg?v=1725724608" alt="Punjabi, Thali">
+        <h3>Punjabi, Thali</h3>
+        <p>3 Ghee paratha, Dal makhni, Pindi chole, Paneer sabji, Jeera rice.</p>
+        <span class="price">₹ 320</span><br>
+        <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+      </div>
+
+      <div class="food-item1">
+        <img src="https://gambhoimart.com/wp-content/uploads/2023/08/PhotoRoom-20230809_120614.png.webp"
+          alt="Paneer chilli">
+        <h3>Paneer Chilli</h3>
+        <p>golden-fried paneer cubes tossed in a spicy and tangy sauce.</p>
+        <span class="price">₹ 299</span><br>
+        <button class="add" onclick="addToCart('Paneer Chilli', 299)">Add to Cart</button>
+      </div>
+
+      <div class="food-item1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTinCKGPNr2g5zx4Qet43b2n3rGXhO-_ppJww&s"
+          alt="South indian">
+        <h3>South indian</h3>
+        <p>Plan dhosa, Idli, Mendu vada, Sambhar, Chatni</p>
+        <span class="price">₹ 180</span><br>
+        <button class="add" onclick="addToCart('South indian', 180)">Add to Cart</button>
+      </div>
+
+      <div class="food-item1">
+        <img src="https://www.zaykakatadka.com/wp-content/uploads/2020/10/Sev-Khamani.png" alt="Sev khamni">
+        <h3>Sev khamni</h3>
+        <p>Green farm special sev khamni with dhaniya chatni</p>
+        <span class="price">₹ 110</span><br>
+        <button class="add" onclick="addToCart('Sev Khamni', 110)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!---search-btn---->
+  <div class="search-container">
+    <input type="text" id="search" placeholder="search food" class="search-input">
+    <button id="search-button" class="search-btn">Search</button>
+  </div>
+
+  <!---food section3---->
+  <section class="food-section3">
+    <h2 class="text"><i>Chinese Food</i></h2>
+    <div class="food-container3">
+      <div class="food-item3">
+        <img src="https://myfoodstory.com/wp-content/uploads/2021/10/Veg-Manchurian-FI-1.jpg" alt="Manchurian">
+        <h3>Manchurian</h3>
+        <p class="price">₹ 110</p>
+        <button class="add" onclick="addToCart('Pizza', 110)">Add to Cart</button>
+      </div>
+
+      <div class="food-item3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEp5Y50RpgvgZNlooh7aHP7YsYOZpMI7zgQ&s"
+          alt="Fried rice">
+        <h3>Fried Rice</h3>
+        <p class="price">₹ 95</p>
+        <button class="add" onclick="addToCart('Pizza', 95)">Add to Cart</button>
+      </div>
+
+      <div class="food-item3">
+        <img src="https://dishesandflavors.com/wp-content/uploads/2021/01/Veg-Chow-Mein-1024x683.jpg" alt="Chowmein">
+        <h3>Chowmein</h3>
+        <p class="price">₹ 175</p>
+        <button class="add" onclick="addToCart('Pizza', 175)">Add to Cart</button>
+      </div>
+
+      <div class="food-item3">
+        <img src="https://www.archanaskitchen.com/images/archanaskitchen/World_Asian/Vegetable-Hakka-Noodles-9956-2.jpg"
+          alt="Hakka noodeld">
+        <h3>Hakka noodels</h3>
+        <p class="price">₹ 135</p>
+        <button class="add" onclick="addToCart('Pizza', 135)">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 class="text"><i>Pizza Corner</i></h2>
+    <div class="food-container3">
+      <div class="food-item3">
+        <img src="https://static.toiimg.com/thumb/56868564.cms?imgsize=1948751&width=800&height=800" alt="margherita">
+        <h3>Margherita</h3>
+        <p class="price">₹ 220</p>
+        <button class="add" onclick="addToCart('Pizza', 220)">Add to Cart</button>
+      </div>
+
+      <div class="food-item3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRof3oMUyNr9VSluNIw2L3l3bdgQOCQxaKewA&s"
+          alt="Four Cheese">
+        <h3>Four Cheese</h3>
+        <p class="price">₹ 345</p>
+        <button class="add" onclick="addToCart('Pizza', 345)">Add to Cart</button>
+      </div>
+
+      <div class="food-item3">
+        <img
+          src="https://i.ytimg.com/vi/sUqHbrAqmnM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAVgf8F-wWZrrz3kJyWXX1x2zi_TA"
+          alt="Burger pizza">
+        <h3>Burger Pizza</h3>
+        <p class="price">₹ 220</p>
+        <button class="add" onclick="addToCart('Pizza', 220)">Add to Cart</button>
+      </div>
+
+      <div class="food-item3">
+        <img
+          src="https://media.istockphoto.com/id/1142744772/photo/pepperoni-pizza-on-a-black-concrete-background.jpg?s=612x612&w=0&k=20&c=_bUckp6ZyubWtwlxUHEx9SIawkIta83RIz4B4QtFbns="
+          alt="Pepperoni">
+        <h3>Pepperoni</h3>
+        <p class="price">₹ 180</p>
+        <button class="add" onclick="addToCart('Pizza', 180)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-----food section 4----->
+  <div class="container4">
+    <h2 class="text"><i>Food Options</i></h2>
+
+    <div class="food-item4">
+      <img
+        src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/d1a04a0a0db55143075e1b32875de7e6ff27adad-2100x1050.png?w=1125&q=75&fit=max&auto=format"
+        alt="Burger">
+      <div class="food-details">
+        <h3>Burger, Cold Drink and French fries</h3>
+        <p class="description">
+          Best burger combo from Macdonald's
+          <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+          <span class="extra-text" style="display: none;">It's a Delicious food with cold drinks and sause.</span>
+        </p>
+        <span class="price">₹ 275</span>
+        <button class="add" onclick="addToCart('Burger combo', 275)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="food-item4">
+      <img
+        src="https://i.ytimg.com/vi/KSmI5jkBQFw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBVtVwABG9fQh25iJ0KHIIxxgAvpQ"
+        alt="Manchurian">
+      <div class="food-details">
+        <h3>Veg Manchurian and fried rice</h3>
+        <p class="description">
+          A special veg Manchurian with Fried rice.
+          <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+          <span class="extra-text" style="display: none;">Extra spicy with Tomato sause.</span>
+        </p>
+        <span class="price">₹ 160</span>
+        <button class="add" onclick="addToCart('Pizza', 160)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="food-item4">
+      <img
+        src="https://www.aldebazaar.com/cdn/shop/products/sweet-emli-panipuri-100-ml3-pack-of-31643354335_1200x1200.jpg?v=1672284036"
+        alt="Panipuri">
+      <div class="food-details">
+        <h3>Panipuri combo</h3>
+        <p class="description">
+          Pani puri combo, full Hygienic.
+          <span class="read-more" onclick="toggleDescription(this)">Read more</span>
+          <span class="extra-text" style="display: none;">This Combo make Your day, order now.</span>
+        </p>
+        <span class="price">₹ 380</span>
+        <button class="add" onclick="addToCart('Pizza', 380)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!---offer--->
+    <!-- Some content to make the page scrollable -->
+    <div style="height: 50px;">
+    </div>
+
+    <!-- Promotion Ad Section -->
+    <div class="promo-container" id="promoAd">
+      <div class="promo-content">
+        <h2>Special Offer Just For You!</h2>
+        <p>Get 50% off on your first purchase. Don't miss out on this limited-time deal!</p>
+        <p>10% Off In Every Order Enjoy Your Day!</p>
+        <p>With Free Delivery!</p>
+        <a href="offer.html"><button class="add">Visit Now</button></a>
+      </div>
+    </div>
+
+    <!----food section 5--->
+    <h2 class="text1"><i>Today's offer</i></h2>
+    <div class="display">
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVK8kzzm9ZZ6Zmam5UoIaSqhgkhZxA-auFw&s"
+            alt="Dhokla" class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Gujrati, Dhokla</h3>
+          <p class="food-description">Very Delicious with kachumbar, Gujrati's special.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 85 <s>89.5</s> ( 5% off )</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('Dhokla', 85)">Add to Cart</button>
+      </section>
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img src="https://www.nehascookbook.com/wp-content/uploads/2022/10/Bhel-kachori-WS-1.jpg" alt="Kachori"
+            class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Kachori</h3>
+          <p class="food-description">Mundal kachori, Extra spicy with Green and red souce.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 120 <s>134.5</s> ( 12% off )</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('Kachori', 120)">Add to Cart</button>
+      </section>
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7unKhaPqrnz4BiPyy7D5ttZG7VgDl_mUV8w&s"
+            alt="Pav bhaji" class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Pav bhaji</h3>
+          <p class="food-description">Spicy pav bhaji in Bombay style, Extra butter pav.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 165 <S>177</S> ( 7% off )</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('Pav bhaji', 165)">Add to Cart</button>
+      </section>
+    </div>
+
+    <h2 class="text"><i>Momo's</i></h2>
+    <div class="display">
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img
+            src="https://www.thespruceeats.com/thmb/UnVh_-znw7ikMUciZIx5sNqBtTU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/steamed-momos-wontons-1957616-hero-01-1c59e22bad0347daa8f0dfe12894bc3c.jpg"
+            alt="steamed momos" class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Steamed momos</h3>
+          <p class="food-description">Steamed momo with sezvan souse, Yummy and spicy.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 260</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('steamed momo', 260)">Add to Cart</button>
+      </section>
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img src="https://www.thecuriouschickpea.com/wp-content/uploads/2018/12/Tibetan-Veggie-Momos-1.jpg" alt="Food"
+            class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Vegetable Momos</h3>
+          <p class="food-description">Tibetan Vegetable Momos with spicy Sesame Tomato Chutney.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 210</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('Vegetable Momos', 210)">Add to Cart</button>
+      </section>
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img
+            src="https://cdn.foodaciously.com/static/recipes/ee9fd204-25cf-4e97-be5a-d7626470d420/easy-vegan-momos-recipe-7ab341154a5c13d6d9642300e7e2c92d-2560.jpg"
+            alt="Food" class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Vegan Momos</h3>
+          <p class="food-description">Momos with Extra Butter Gravy.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 135</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('Vegan Momos', 135)">Add to Cart</button>
+      </section>
+    </div>
+
+    <h2 class="text"><i>McDonald's Special</i></h2>
+    <div class="display">
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img src="https://i.pinimg.com/736x/95/ae/be/95aebe4f4f23854beb99bab1d64a4ee5.jpg" alt="crispy veggie burger"
+            class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Crispy Veggie Burger</h3>
+          <p class="food-description">McDonald's special Veggie Burger.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 99</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('Crispy vEGGIE bURGER', 99)">Add to Cart</button>
+      </section>
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img src="https://im.indiatimes.in/content/2023/Mar/tikki_6418927966115.jpg?w=1200&h=900&cc=1&webp=1&q=75"
+            alt="Aloo Tikki Burger" class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">McAloo Tikki Burger</h3>
+          <p class="food-description">McDonald's Special Aloo Tikki Burger with Tomato.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 129</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('McAloo Tikki Burger', 129)">Add to Cart</button>
+      </section>
+
+      <section class="food-bar">
+        <div class="food-image-wrapper">
+          <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2021-05/McAloo%20Tikki%20VM.jpg"
+            alt="Burger Combo" class="food-image">
+        </div>
+        <div class="food-info">
+          <h3 class="food-title">Burger Combos ( 3 pc Meals )</h3>
+          <p class="food-description">McDonald's Special Burger Combo.</p>
+          <div class="price-wrapper">
+            <span class="price">₹ 333</span>
+          </div>
+        </div>
+        <button class="add" onclick="addToCart('Burger Combo', 333)">Add to Cart</button>
+      </section>
+    </div>
+
+    <!--offer section---->
+    <div class="container7">
+      <div class="food-text">
+        <h2>Our Service</h2>
+        <h3>Craving your favorite dish but prefer to enjoy it at home? We offer convenient takeout and delivery
+          services.
+          Enjoy our delicious meals in the comfort of your own space with just a few clicks or a quick phone call.</h3>
+      </div>
+
+      <div class="food-text">
+        <h2>Takeout & Delivery</h2>
+        <h3>Planning an event? Let us take care of the food! Our expert catering team offers customized menus to suit
+          your
+          needs. Whether it’s a corporate event, wedding, or family gathering, we’ll ensure your guests enjoy a gourmet
+          experience.</h3>
+      </div>
+    </div>
+
+    <!---food section6--->
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <div class="container5">
+      <section class="food-section5">
+        <h2 class="section-title"><i>New Arrivals</i></h2>
+
+        <div class="offers-container">
+          <!-- Offer 1 -->
+          <div class="offer" data-aos="fade-up">
+            <img
+              src="https://png.pngtree.com/png-clipart/20230508/original/pngtree-indian-sweet-gulab-jamun-closeup-view-png-image_9151773.png"
+              alt="Gulab jamun">
+            <h3>Gulab Jamun</h3>
+            <p>Foodie's Delight Special Sweet!</p>
+            <span class="price">₹ 95</span><br>
+            <button class="add" onclick="addToCart('Gulab jamun', 95)">Add to Cart</button>
+          </div>
+
+          <!-- Offer 2 -->
+          <div class="offer" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/048/949/285/non_2x/fast-food-image-without-background-snack-meal-pizza-png.png"
+              alt="Chhole Bhature">
+            <h3>Spicy Pizza</h3>
+            <p>Pizza With Extra Spicy!</p>
+            <span class="price">₹ 130</span><br>
+            <button class="add" onclick="addToCart('Pizza', 130)">Add to Cart</button>
+          </div>
+
+          <!-- Offer 3 -->
+          <div class="offer" data-aos="fade-up" data-aos-delay="400">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/047/523/600/non_2x/delicious-vegetable-biryani-in-a-bowl-photo-png.png"
+              alt="Biryani">
+            <h3>Biryani</h3>
+            <p>Delicious Mix Veg Biryani!</p>
+            <span class="price">₹ 210</span><br>
+            <button class="add" onclick="addToCart('Veg Biryani', 210)">Add to Cart</button>
+          </div>
+        </div>
+
+        <h2 class="section-title"><i>Latest Arrivals</i></h2>
+
+        <div class="food-items5">
+          <div class="food-item5" data-aos="fade-left">
+            <img src="https://t4.ftcdn.net/jpg/06/78/12/01/360_F_678120157_GwrkDJE19x77N2BiSrsml6pN4ef94o8x.jpg"
+              alt="Pesty">
+            <h3>Choclate Pesty</h3>
+            <p>Very Delicious and Choclatey!</p>
+            <span class="price">₹ 135</span><br>
+            <button class="add" onclick="addToCart('Pesty', 135)">Add to Cart</button>
+          </div>
+
+          <div class="food-item5" data-aos="fade-left" data-aos-delay="200">
+            <img src="https://www.krumpli.co.uk/wp-content/uploads/2024/12/Paneer-Tikka-Kebabs-2-1200-735x735.jpg"
+              alt="Paneer Tikka">
+            <h3>Paneer Tikka</h3>
+            <p>Tadka With Paneer Tikka!</p>
+            <span class="price">₹ 320</span><br>
+            <button class="add" onclick="addToCart('Paneer Tikka', 320)">Add to Cart</button>
+          </div>
+
+          <div class="food-item5" data-aos="fade-left" data-aos-delay="400">
+            <img
+              src="https://deliciousmadeeasy.com/wp-content/uploads/2018/04/chocoholic-cold-brew-coffee-1-of-1-7-scaled.jpg"
+              alt="Cold Coffee">
+            <h3>Cold Coffee</h3>
+            <p>Foodie's Delight Couple Cold Coffee!</p>
+            <span class="price">₹ 170</span><br>
+            <button class="add" onclick="addToCart('Cold Coffee', 170)">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2000, // Duration of the animation
+      once: true,     // Animation triggers only once
+      offset: 100,    // Start the animation 200px before the element comes into view
+    });
+  </script>
+
+  <!---food section 7---->
+  <section class="foodie-section">
+    <div class="foodie-content">
+      <h2><i>Gujrati Breakfast</i></h2>
+      <p class="foodie-description"><strong>Delicious and Very Testy Gujrati Breakfast.</strong> <br> Spicy Chevda,
+        Khandavi, Dhokla,
+        Dahi chat, Dhepla With Spicy Souce, Jalebi - Fafda, Bhujiya and Khakhra.</p>
+      <span class="price">Only in ₹ 370</span><br>
+      <button class="order-now-btn" onclick="addToCart('Gujrati Breakfast',370)">Order Now</button>
+    </div>
+    <div class="foodie-image">
+      <img
+        src="https://content.jdmagicbox.com/v2/comp/mumbai/x6/022pxx22.xx22.221004204558.q2x6/catalogue/green-gujarat-worli-mumbai-restaurants-k5o6cjwm36.jpg"
+        alt="Delicious Food">
+    </div>
+  </section>
+
+  <!----food section 8---->
+  <section class="food-section6">
+    <h3 class="section-title6"><i>Our Delicious Breakfast</i></h3>
+    <div class="food-container6">
+
+      <div class="food-item6">
+        <img src="https://b.zmtcdn.com/data/pictures/chains/0/18667620/9fa809ab62b6c3d8fd480800c0812b61.jpg"
+          alt="Amrutsari Kulcha">
+        <div class="food-info6">
+          <h3>Amrutsari Kulcha</h3>
+          <p>amrutsari Kulcha, The Test of Amrutsar.</p>
+          <div class="food-price6">
+            <span>₹ 225</span>
+            <button class="add" onclick="addToCart('Amrutsari Kulcha', 225)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-item6">
+        <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2022/09/poha-recipe-1.jpg" alt="Poha">
+        <div class="food-info6">
+          <h3>Poha</h3>
+          <p>Fresh and Testy Poha, The Test Of Muharashtra.</p>
+          <div class="food-price6">
+            <span>₹ 80</span>
+            <button class="add" onclick="addToCart('poha', 80)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-item6">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdkPDiG588DO3_9GcGK-xNWnKoa_0oP0-RuA&s"
+          alt="Thepla and Aachar">
+        <div class="food-info6">
+          <h3>Thepla and Aachar</h3>
+          <p>A healthy Food Thepla Test of Gujrat.</p>
+          <div class="food-price6">
+            <span>₹ 135</span>
+            <button class="add" onclick="addToCart('Thepla and Aachar', 135)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="food-section6">
+    <h3 class="section-title6"><i>Best Menu For Lunch</i></h3>
+    <div class="food-container6">
+
+      <div class="food-item6">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4-U_O_Bwm_mKSmDd5sc1w725aPxq-vnb5cg&s"
+          alt="Dal - rice">
+        <div class="food-info6">
+          <h3>Dal - Rice</h3>
+          <p>Healthy and Soft Food For Lunchh.</p>
+          <div class="food-price6">
+            <span>₹ 125</span>
+            <button class="add" onclick="addToCart('Dal - Rice', 125)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-item6">
+        <img src="https://www.shutterstock.com/image-photo/sandwich-crispy-toasts-slices-pork-260nw-1663220662.jpg"
+          alt="Sendwitch">
+        <div class="food-info6">
+          <h3>Sendwich and Mango Juice</h3>
+          <p>Testy Senwich and Juice.</p>
+          <div class="food-price6">
+            <span>₹ 175</span>
+            <button class="add" onclick="addToCart('Sendwich and Juice', 175)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-item6">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/samosa-recipe.jpg" alt="Samosa">
+        <div class="food-info6">
+          <h3>Samosa and Green Chatni</h3>
+          <p>Spicy Samosa With Green Chatni.</p>
+          <div class="food-price6">
+            <span>₹ 70</span>
+            <button class="add" onclick="addToCart('Samosa', 70)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--our service--->
+  <div class="container8">
+    <!-- Introduction Section -->
+    <section class="section8">
+      <h2>Why Choose Foodie's Delight</h2>
+      <p>Foodie's Delight Deliver Healthy and Hygenic food.</p>
+    </section>
+
+    <!-- Shop Vegetables Section -->
+    <section class="section8">
+      <h2>Our Service</h2>
+      <div class="category-list8">
+        <div class="category-item8">
+          <h3>Food Delivery!</h3>
+          <p>We Delivered Food in just 15 minute.</p>
+        </div>
+        <div class="category-item8">
+          <h3>Hygiene!</h3>
+          <p>Foodie's Delight Make and Deliver Food Very Hygienic.</p>
+        </div>
+        <div class="category-item8">
+          <h3>Customer Setisfaction!</h3>
+          <p>Foodie's Delight Takes Full Care of Customer Satisfaction.</p>
+        </div>
+        <div class="category-item8">
+          <h3>Charges!</h3>
+          <p>Foodie's Delight Does Not Charge any Additional Fees.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section8">
+      <h2>How It Works</h2>
+      <ol style="text-align:left; display: inline-block;">
+        <li><strong>Browse & Select:</strong> Choose your favorite food from our selection.</li>
+        <li><strong>Place Your Order:</strong> Add them to your cart and proceed to secure checkout.</li>
+        <li><strong>Delivered Food:</strong> Choose your delivery time, and we’ll deliver your fresh food to your
+          doorstep.</li>
+      </ol>
+    </section>
+
+    <!-- Customer Satisfaction Section -->
+    <section class="section8">
+      <h2>Your Satisfaction is Our Priority</h2>
+      <p>We are committed to delivering the freshest food with excellent customer service. Your satisfaction matters to
+        us!</p>
+    </section>
+  </div>
+
+  <!---food section 9------>
+  <div class="food-slider7">
+    <h3><i>Top Rated Near You</i></h3>
+    <div class="slider-wrapper7">
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 1">
+        </div>
+        <div class="food-info7">
+          <h3>Pizza Margherita</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 2">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Sushi Rolls</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 3">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Burger Deluxe</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 4">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Pasta Alfredo</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 5">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Tacos</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 4">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Pasta Alfredo</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 4">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Pasta Alfredo</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 4">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Pasta Alfredo</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 4">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Pasta Alfredo</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="slider-item7">
+        <div class="food-image7">
+          <img src="" alt="Food 4">
+        </div>
+        <div class="food-info7">
+          <h3 class="food-name7">Pasta Alfredo</h3>
+          <span class="price">₹ 320</span><br>
+          <button class="add" onclick="addToCart('Punjabi, Thali', 320)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <button class="prev-btn7" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next-btn7" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+  <!--footer--->
+  <footer>
+    <div class="footer-container">
+      <h3>Contact Information</h3>
+      <p class="footer-section">E-mail : Foodie's Delight@gmail.com</p>
+      <p class="footer-section">Phone : 1234567890</p>
+      <p class="footer-section">Address : 123 side Foodie's Delight</p>
+    </div>
+
+    <div class="footer-container">
+      <h3>Opening Hours</h3>
+      <p class="footer-section">Mon - Fri: 10:00 AM - 10:00 PM</p>
+      <p class="footer-section">Sat - Sun: 9:00 AM - 11:00 PM</p>
+    </div>
+
+    <div class="footer-container">
+      <h3>Follow Us</h3>
+      <p class="footer-section"><a href="#">Facebook</a></p>
+      <p class="footer-section"><a href="#">Instagram</a></p>
+      <p class="footer-section"><a href="#">Twitter</a></p>
+      <p class="footer-section"><a href="#">YouTube</a></p>
+    </div>
+
+    <div class="footer-container">
+      <h3>Drop Your Review</h3>
+      <a href="review.html"><button class="footer-btn">Rating & Review</button></a>
+
+      <h3>Log in & Ragister</h3>
+      <a href="login.html"><button class="footer-btn">Log in & Ragister</button></a>
+    </div>
+  </footer>
+
+  <p class="footer-text">&copy; Foodie's delight. All rights reserved.</p>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
