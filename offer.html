@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foodie's Delight offer</title>
 </head>
 
 <style>
@@ -17,13 +17,12 @@
     .navbar {
         display: flex;
         justify-content: space-between;
-        background-color: #b0391f;
         padding: 15px;
         color: white;
+        background-color: #b0391f;
     }
 
     .logo {
-        margin-top: 30px;
         color: white;
     }
 
@@ -87,6 +86,8 @@
         text-align: center;
         font-size: 1.5rem;
         margin-bottom: 40px;
+        margin-top: 30px;
+        color: #b0391f;
     }
 
     .offers-container,
@@ -107,6 +108,7 @@
         text-align: center;
         padding: 20px;
         transition: transform 0.3s ease;
+        border: 1px solid #b0391f;
     }
 
     .offer img,
@@ -143,6 +145,113 @@
             width: 100%;
         }
     }
+
+    /* add to cart */
+    .add {
+        background-color: #ff5722;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .add:hover {
+        background-color: #e64a19;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #b0391f;
+        margin-top: 5px;
+    }
+
+    .offer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .offer-box {
+        background-color: #b0391f;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .offer-heading {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .offer-text {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .offer-button {
+        background-color: #ff5722;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .offer-button a {
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .offer-button:hover {
+        background-color: #e64a19;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .offer-heading {
+            font-size: 2rem;
+        }
+
+        .offer-text {
+            font-size: 1rem;
+        }
+
+        .offer-button {
+            font-size: 0.9rem;
+            padding: 8px 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .offer-heading {
+            font-size: 1.8rem;
+        }
+
+        .offer-text {
+            font-size: 0.9rem;
+        }
+
+        .offer-button {
+            font-size: 0.8rem;
+            padding: 6px 12px;
+        }
+    }
 </style>
 
 <body class="color">
@@ -162,58 +271,152 @@
         </nav>
     </header>
 
+
+
     <!-- AOS Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
 
     <div class="container">
         <section class="food-section">
-            <h2 class="section-title">Latest Offers & New Arrivals</h2>
+            <h2 class="section-title">Today's offer 20% off</h2>
 
             <div class="offers-container">
                 <!-- Offer 1 -->
                 <div class="offer" data-aos="fade-up">
-                    <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2021-05/McAloo%20Tikki%20VM.jpg"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKqzrE2hZnTGh65h_SlXd8X8V75HXdXC3Eg&s"
                         alt="Offer 1">
                     <h3>Discount on Pizza</h3>
                     <p>Get 20% off on all pizzas!</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Gujrati, Thali', 250)">Add to Cart</button>
                 </div>
 
                 <!-- Offer 2 -->
                 <div class="offer" data-aos="fade-up" data-aos-delay="200">
-                    <img src="" alt="Offer 2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV34ehUBU0_p4GFLods1_WNx5z4i7XgpBwrA&s"
+                        alt="Offer 2">
                     <h3>Free Drink with Burgers</h3>
                     <p>Enjoy a free soft drink with any burger purchase.</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Gujrati, Thali', 250)">Add to Cart</button>
                 </div>
 
                 <!-- Offer 3 -->
                 <div class="offer" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://via.placeholder.com/300x200" alt="Offer 3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS79MFtJJvDHQYfNCd5GJw6haUpBiYeFKjS6w&s"
+                        alt="Offer 3">
                     <h3>Buy 1 Get 1 Free</h3>
-                    <p>Get 1 sandwich free when you buy one!</p>
+                    <p>Get 1 puff free when you buy one!</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Gujrati, Thali', 250)">Add to Cart</button>
                 </div>
             </div>
 
-            <h2 class="section-title">Latest Arrivals</h2>
+            <h2 class="section-title">10% off Order up to ₹ 300</h2>
 
             <div class="food-items">
                 <div class="food-item" data-aos="fade-left">
-                    <img src="https://im.indiatimes.in/content/2023/Mar/tikki_6418927966115.jpg?w=1200&h=900&cc=1&webp=1&q=75"
+                    <img src="https://www.spicebangla.com/wp-content/uploads/2024/08/Spicy-Pasta-recipe-optimised-scaled.webp"
                         alt="Food 1">
                     <h3>Spicy Pasta</h3>
                     <p>Our new Spicy Pasta is a must-try!</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Gujrati, Thali', 250)">Add to Cart</button>
                 </div>
 
                 <div class="food-item" data-aos="fade-left" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/300x200" alt="Food 2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBFCimCM1wFvb3FZQOZH_j5ta4Qd2SlNj2vg&s"
+                        alt="Food 2">
                     <h3>Cheese Burger</h3>
                     <p>Cheese overload with every bite!</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Gujrati, Thali', 250)">Add to Cart</button>
                 </div>
 
                 <div class="food-item" data-aos="fade-left" data-aos-delay="400">
-                    <img src="https://via.placeholder.com/300x200" alt="Food 3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbjmfrDGQ3F1wC-oIPttBOdkVTkeMCSrh2yg&s"
+                        alt="Food 3">
                     <h3>Chocolate Cake</h3>
                     <p>Rich and delicious chocolate cake.</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Gujrati, Thali', 250)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="offer-container">
+        <div class="offer-box">
+            <h1 class="offer-heading">Delicious Offer Just For You!</h1>
+            <p class="offer-text">Get 50% off on your first food order! Don't miss out on this limited-time offer!</p>
+            <button class="offer-button"><a href="index.html">Order Now</a></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="food-section">
+            <h2 class="section-title">Free Delivery up to ₹ 250 order</h2>
+
+            <div class="offers-container">
+                <!-- Offer 1 -->
+                <div class="offer" data-aos="fade-up">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYbrfL5jxN-56vR20XJ7rsNmvBV5VOLbKvuQ&s"
+                        alt="Offer 1">
+                    <h3>Discount on Sandwich</h3>
+                    <p>Get 20% off on all Sendwich!</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Sendwich', 150)">Add to Cart</button>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="offer" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8QmnRyLKIOqyKHyqsjGr8DPltNiWrYMDGlA&s"
+                        alt="Offer 2">
+                    <h3>Noodels</h3>
+                    <p>Noodels with Manchurial.</p>
+                    <span class="price">₹ 250</span><br>
+                    <button class="add" onclick="addToCart('Noodels', 250)">Add to Cart</button>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="offer" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyb-Z7a6AROyLfFkAqLs846tciX6dJUVxeAg&s"
+                        alt="Offer 3">
+                    <h3>Jalebi, Fafda</h3>
+                    <p>Best offer in our section!</p>
+                    <span class="price">₹ 150</span><br>
+                    <button class="add" onclick="addToCart('jalebi, fafda', 150)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h2 class="section-title">Limited Offer</h2>
+
+            <div class="food-items">
+                <div class="food-item" data-aos="fade-left">
+                    <img src="https://cookingfromheart.com/wp-content/uploads/2020/09/Aloo-Paratha-4.jpg" alt="Food 1">
+                    <h3>Aloo paratha</h3>
+                    <p>Aloo paratha!</p>
+                    <span class="price">₹ 70</span><br>
+                    <button class="add" onclick="addToCart('Aloo paratha', 70)">Add to Cart</button>
+                </div>
+
+                <div class="food-item" data-aos="fade-left" data-aos-delay="200">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkTzvbCWtpEmxUGC3MqxlMjuGE8lp_NDJRJw&s"
+                        alt="Food 2">
+                    <h3>Foodie's Sweet</h3>
+                    <p>With special offer!</p>
+                    <span class="price">₹ 120</span><br>
+                    <button class="add" onclick="addToCart('sweet', 120)">Add to Cart</button>
+                </div>
+
+                <div class="food-item" data-aos="fade-left" data-aos-delay="400">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzFAuLck6RI7MwQYsCLSQ3taqGfpWI3yA4Ow&s"
+                        alt="Food 3">
+                    <h3>Masala Aloo</h3>
+                    <p>Foodie's Delight special Dishesh.</p>
+                    <span class="price">₹ 160</span><br>
+                    <button class="add" onclick="addToCart('masala aloo', 160)">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -233,6 +436,7 @@
         <p>&copy; Foodie's delight. All rights reserved.</p>
     </footer>
 
+    <script src="offer.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ function addToCart(name, price) {
     // Save the updated cart to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    alert(`${name} added to cart!`);
+    alert(`${name} added successfully!`);
 }
 
 // Toggle burger menu visibility on mobile screens
@@ -142,7 +142,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         }
     });
 }, {
-    threshold: 0.5 // Trigger animation when 50% of the section is visible
+    threshold: 1 // Trigger animation when 50% of the section is visible
 });
 
 // Start observing the food section
@@ -168,7 +168,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-
 // food section 9 
 let currentIndex = 0;
 const items = document.querySelectorAll('.slider-item7');
@@ -189,3 +188,123 @@ function moveSlide(direction) {
     // Move the slider by adjusting the transform property
     wrapper.style.transform = `translateX(-${currentIndex * 33.33}%)`;
 }
+
+
+// search btn section 2 
+// Mock recipe data for demonstration
+const recipes = [
+    { name: 'pizza', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIibPbOeDQQscm9g-fDNdCvROokQJukg8nYQ&s' },
+    { name: 'chinies', image: 'https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/wlqenuza/a1ccb6d0-30e6-43eb-a599-d8e6e7d840d1.jpg' },
+    { name: 'burger', image: 'https://images.firstpost.com/uploads/2023/04/burger-pic.jpg?im=FitAndFill=(1200,675)' },
+    { name: 'Tacos', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUjgn03jBikO5rfksRaa2isvJP9CJF4r_AAw&s' },
+    { name: 'samosa', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxnVgCV-6sbWMQ-OaALcEztviIakZJgzo5Jg&s' },
+    { name: 'chaat', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYOfsOElpwBStZjHbuwcOsPfqmUqkJxYhirQ&s' },
+];
+
+// Function to search for recipes
+function searchRecipe() {
+    const searchTerm = document.getElementById('recipe-search').value.toLowerCase();
+    const results = recipes.filter(recipe => recipe.name.toLowerCase().includes(searchTerm));
+
+    displayRecipes(results);
+}
+
+// Function to display the recipes
+function displayRecipes(recipesList) {
+    const recipeResults = document.getElementById('recipe-results');
+    recipeResults.innerHTML = ''; // Clear previous results
+
+    if (recipesList.length === 0) {
+        recipeResults.innerHTML = '<p>No recipes found!</p>';
+        return;
+    }
+
+    recipesList.forEach(recipe => {
+        const recipeCard = document.createElement('div');
+        recipeCard.classList.add('recipe-card');
+        recipeCard.innerHTML = `
+                    <img src="${recipe.image}" alt="${recipe.name}">
+                    <h3>${recipe.name}</h3>
+                `;
+        recipeResults.appendChild(recipeCard);
+    });
+}
+
+
+// food section 5 
+let currentIndex1 = 0;
+
+function moveSlider(direction) {
+    const foodSection = document.querySelector('.food-section5');
+    const foodItems = document.querySelectorAll('.food-item5');
+    const totalItems = foodItems.length;
+
+    // Get the width of an item dynamically
+    const itemWidth = foodItems[0].offsetWidth;
+
+    // Calculate the offset
+    const offset = direction * itemWidth;
+
+    currentIndex1 += direction;
+
+    // Loop the slider
+    if (currentIndex1 < 0) {
+        currentIndex1 = totalItems - 1;
+    } else if (currentIndex1 >= totalItems) {
+        currentIndex1 = 0;
+    }
+
+    // Adjust the transform for the slider
+    foodSection.style.transform = `translateX(-${currentIndex1 * itemWidth}px)`;
+}
+
+// Handle window resizing to adjust item width dynamically
+window.addEventListener('resize', function () {
+    const foodSection = document.querySelector('.food-section5');
+    const foodItems = document.querySelectorAll('.food-item5');
+
+    // Recalculate and adjust the transform based on the new width
+    const itemWidth = foodItems[0].offsetWidth;
+    foodSection.style.transform = `translateX(-${currentIndex1 * itemWidth}px)`;
+});
+
+
+// food section 6
+let currentIndex2 = 0;
+
+function moveSlider1(direction) {
+    const foodSection = document.querySelector('.food-section7');
+    const foodItems = document.querySelectorAll('.food-item7');
+    const totalItems = foodItems.length;
+
+    // Get the width of an item dynamically
+    const itemWidth = foodItems[0].offsetWidth;
+
+    // Calculate the offset
+    const offset = direction * itemWidth;
+
+    currentIndex2 += direction;
+
+    // Loop the slider
+    if (currentIndex2 < 0) {
+        currentIndex2 = totalItems - 1;
+    } else if (currentIndex2 >= totalItems) {
+        currentIndex2 = 0;
+    }
+
+    // Adjust the transform for the slider
+    foodSection.style.transform = `translateX(-${currentIndex2 * itemWidth}px)`;
+}
+
+// Handle window resizing to adjust item width dynamically
+window.addEventListener('resize', function () {
+    const foodSection = document.querySelector('.food-section7');
+    const foodItems = document.querySelectorAll('.food-item7');
+
+    // Recalculate and adjust the transform based on the new width
+    const itemWidth = foodItems[0].offsetWidth;
+    foodSection.style.transform = `translateX(-${currentIndex2 * itemWidth}px)`;
+});
+
+
+
